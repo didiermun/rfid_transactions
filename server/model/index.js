@@ -1,0 +1,37 @@
+const mongoose = require("mongoose");
+const RFID_Schema = new mongoose.Schema(
+  {
+    _id: false,
+    uuid: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    Owner: {
+      type: String,
+    },
+    current_balance: {
+      type: String,
+    }
+  },
+);
+const Transaction_Schema = new mongoose.Schema(
+    {
+      card_id: {
+          type: String,
+          required: true,
+          ref:"RFID",
+      },
+      transactions_fare: {
+        type: String,
+      },
+      new_balance: {
+        type: String,
+      }
+    },
+    {
+        timestamps: true,
+    }
+  );
+  exports.RFID = mongoose.model("RFID", RFID_Schema);
+exports.Transactions = mongoose.model("Transaction", Transaction_Schema);
