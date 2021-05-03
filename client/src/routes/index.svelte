@@ -6,42 +6,9 @@
 </script>
 
 <svelte:head>
-  <!-- Primary Meta Tags -->
   <title>RFID Data View</title>
-  <meta name="title" content="SvelteKit ❤️ Tailwind 2" />
-  <meta name="description" content="SvelteKit and Tailwind 2 toggle dark/light theme demo" />
-  <meta name="keywords" content="Svelte, SvelteKit, Svelte-kit, Tailwind, HTML, CSS, JavaScript" />
-  <meta name="author" content="@dansvel" />
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://metatags.io/" />
-  <meta property="og:title" content="SvelteKit ❤️ Tailwind 2" />
-  <meta property="og:description" content="SvelteKit and Tailwind 2 toggle dark/light theme demo" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://metatags.io/" />
-  <meta property="twitter:title" content="SvelteKit ❤️ Tailwind 2" />
-  <meta
-    property="twitter:description"
-    content="SvelteKit and Tailwind 2 toggle dark/light theme demo"
-  />
-  <meta
-    property="twitter:image"
-    content="https://github.com/dansvel/sveltekit-typescript-postcss-tailwind2/raw/master/screenshot.png"
-  />
 </svelte:head>
-<h1 class="text-5xl font-extrabold mb-2">Hello {$theme} world!</h1>
-<!-- <h2 class="text-3xl font-bold mb-4">Now using SvelteKit beta</h2> -->
-
-<!-- <pre>
-@sveltejs/kit 1.0.0.next-71
-@sveltejs/adapter-static 1.0.0.next-4
-</pre> -->
-
-
-<p>The title is using utility class, but all other elements is using style component.</p>
-<p>Just check <code>src/routes/index.svelte</code> to see the code.</p>
+<h1 class="text-2xl font-extrabold mb-2">All Transactions</h1>
 
 <Timer />
 <Counter />
