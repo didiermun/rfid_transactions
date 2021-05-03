@@ -40,7 +40,7 @@ exports.newTransaction = async(req, res)=>{
 
     const saved = await transaction.save();
 
-    return res.status(200).send({transaction});
+    return res.status(200).send({saved});
 }
 
 exports.newCard = async(req, res) =>{

@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-
+require("./router")(app);
 const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
@@ -20,6 +20,7 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
+    useCreateIndex: true,
   })
   .then(() => {
     console.log("\nDB Connected...");
