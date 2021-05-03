@@ -44,6 +44,7 @@ exports.newTransaction = async(req, res)=>{
 }
 
 exports.newCard = async(req, res) =>{
+    console.log(req.body);
     const no_card = await RFID.findOne({uuid: req.body.uuid});
     if(no_card){
         return res.send({message: 'RFID already exists, can not be duplicated'}).status(400);
