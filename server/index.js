@@ -24,7 +24,7 @@ mongoose
   })
   .then(() => {
     console.log("\nDB Connected...");
-    app.listen(process.env.PORT || 5500, () => {
+    app.listen(process.env.PORT || 6600, () => {
       console.log(`Ctrl+Click to open: http://localhost:${process.env.PORT || 6600}\n`);
     });
   })
