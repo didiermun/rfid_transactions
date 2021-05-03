@@ -1,27 +1,27 @@
 <script context="module">
-		export async function load({ fetch }) {
-			let transactions;
-	
-			try {
-				transactions = await fetch(`http://localhost:6600/api/transactions`);
-				transactions = await transactions.json();
-			} catch (e) {
-				console.log(e);
-			}
-			return {
-				props: {
-					transactions
-				}
-			};
-		}
+    export async function load({ fetch, page }) {
+        let transactions;
+
+        try {
+            transactions = await fetch(`http://localhost:6600/api/transactions/${page.params.id}`);
+            transactions = await transactions.json();
+        } catch (e) {
+            console.log(e);
+        }
+        return {
+            props: {
+                transactions
+            }
+        };
+    }
 </script>
 <script>
-  export let transactions;
-  console.log(transactions);
+export let transactions;
+console.log(transactions);
 </script>
 
 <svelte:head>
-  <title>RFIDs Data View</title>
+  <title>RFID Data View</title>
 </svelte:head>
 <h1 class="text-2xl font-extrabold mb-2 -mt-8">All Transactions</h1>
 
@@ -75,3 +75,4 @@
     }
   }
 </style>
+
