@@ -11,7 +11,8 @@ const RFID_Schema = new mongoose.Schema(
       type: String,
     },
     current_balance: {
-      type: String,
+      type: Number,
+      required: true
     }
   },
 );
@@ -23,10 +24,12 @@ const Transaction_Schema = new mongoose.Schema(
           ref:"RFID",
       },
       transactions_fare: {
-        type: String,
+        type: Number,
+        required: true
       },
       new_balance: {
-        type: String,
+        type: Number,
+        required: true
       }
     },
     {
