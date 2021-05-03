@@ -15,8 +15,10 @@
 			};
 		}
 </script>
-<script lang="ts">
+<script>
   export let transactions;
+  console.log(transactions);
+  import { goto } from '$app/navigation';
 </script>
 
 <svelte:head>
@@ -35,57 +37,18 @@
 			</tr>
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
-		<tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full" style="height: 63vh;">
+		<tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-auto w-full" style="height: 63vh;">
+      {#if transactions.length == 0}
+      <p>No records are found .....</p>
+      {/if}
+      {#each transactions as transaction}
 			<tr class="flex w-full mb-4">
-				<td class="p-4 w-1/4">Dogs</td>
-				<td class="p-4 w-1/4">Cats</td>
-				<td class="p-4 w-1/4">Birds</td>
-				<td class="p-4 w-1/4">Fish</td>
+				<td class="p-4 w-1/4">{transaction.card_id}</td>
+				<td class="p-4 w-1/4">{ transaction.transaction_fare}</td>
+				<td class="p-4 w-1/4">{ transaction.current_balance}</td>
+				<td class="p-4 w-1/4">{ transaction.createdAt}</td>
 			</tr>
-			<tr class="flex w-full mb-4">
-				<td class="p-4 w-1/4">Dogs</td>
-				<td class="p-4 w-1/4">Cats</td>
-				<td class="p-4 w-1/4">Birds</td>
-				<td class="p-4 w-1/4">Fish</td>
-			</tr>
-			<tr class="flex w-full mb-4">
-				<td class="p-4 w-1/4">Dogs</td>
-				<td class="p-4 w-1/4">Cats</td>
-				<td class="p-4 w-1/4">Birds</td>
-				<td class="p-4 w-1/4">Fish</td>
-			</tr>
-			<tr class="flex w-full mb-4">
-				<td class="p-4 w-1/4">Dogs</td>
-				<td class="p-4 w-1/4">Cats</td>
-				<td class="p-4 w-1/4">Birds</td>
-				<td class="p-4 w-1/4">Fish</td>
-			</tr>
-
-			<tr class="flex w-full mb-4">
-				<td class="p-4 w-1/4">Dogs</td>
-				<td class="p-4 w-1/4">Cats</td>
-				<td class="p-4 w-1/4">Birds</td>
-				<td class="p-4 w-1/4">Fish</td>
-			</tr>
-			<tr class="flex w-full mb-4">
-				<td class="p-4 w-1/4">Dogs</td>
-				<td class="p-4 w-1/4">Cats</td>
-				<td class="p-4 w-1/4">Birds</td>
-				<td class="p-4 w-1/4">Fish</td>
-			</tr>
-			<tr class="flex w-full mb-4">
-				<td class="p-4 w-1/4">Dogs</td>
-				<td class="p-4 w-1/4">Cats</td>
-				<td class="p-4 w-1/4">Birds</td>
-				<td class="p-4 w-1/4">Fish</td>
-			</tr>
-			<tr class="flex w-full mb-4">
-				<td class="p-4 w-1/4">Dogs</td>
-				<td class="p-4 w-1/4">Cats</td>
-				<td class="p-4 w-1/4">Birds</td>
-				<td class="p-4 w-1/4">Fish</td>
-			</tr>
-
+      {/each}
 		</tbody>
 	</table>
 </div>

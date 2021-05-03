@@ -10,7 +10,7 @@
   })
 </script>
 
-<div class="float-right w-max"><ToggleTheme/></div>
+<div class="float-right w-max flex"><button>Register</button><ToggleTheme/></div>
 <main>
   <slot />
 </main>
