@@ -42,6 +42,5 @@
           balance: 0,
       }
       async function newCard() {
-
       }
   </script>
