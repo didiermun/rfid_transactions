@@ -1,17 +1,95 @@
+<script context="module">
+		export async function load({ fetch }) {
+			let transactions;
+	
+			try {
+				transactions = await fetch(`http://localhost:6600/api/transactions`);
+				transactions = await transactions.json();
+			} catch (e) {
+				console.log(e);
+			}
+			return {
+				props: {
+					transactions
+				}
+			};
+		}
+</script>
 <script lang="ts">
-  import { theme } from './store'
-  import ToggleTheme from '$lib/ToggleTheme.svelte'
-  import Counter from '$lib/Counter.svelte'
-  import Timer from '$lib/Timer.svelte'
+  export let transactions;
 </script>
 
 <svelte:head>
   <title>RFID Data View</title>
 </svelte:head>
-<h1 class="text-2xl font-extrabold mb-2">All Transactions</h1>
+<h1 class="text-2xl font-extrabold mb-2 -mt-8">All Transactions</h1>
 
-<Timer />
-<Counter />
+<div class="w-full">
+	<table class="text-left w-full">
+		<thead class="bg-gray-800 flex text-white w-full">
+			<tr class="flex w-full mb-4">
+				<th class="p-4 w-1/4">UUID</th>
+				<th class="p-4 w-1/4">Transaction Fare</th>
+				<th class="p-4 w-1/4">New Balance</th>
+				<th class="p-4 w-1/4">Date</th>
+			</tr>
+		</thead>
+    <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
+		<tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full" style="height: 63vh;">
+			<tr class="flex w-full mb-4">
+				<td class="p-4 w-1/4">Dogs</td>
+				<td class="p-4 w-1/4">Cats</td>
+				<td class="p-4 w-1/4">Birds</td>
+				<td class="p-4 w-1/4">Fish</td>
+			</tr>
+			<tr class="flex w-full mb-4">
+				<td class="p-4 w-1/4">Dogs</td>
+				<td class="p-4 w-1/4">Cats</td>
+				<td class="p-4 w-1/4">Birds</td>
+				<td class="p-4 w-1/4">Fish</td>
+			</tr>
+			<tr class="flex w-full mb-4">
+				<td class="p-4 w-1/4">Dogs</td>
+				<td class="p-4 w-1/4">Cats</td>
+				<td class="p-4 w-1/4">Birds</td>
+				<td class="p-4 w-1/4">Fish</td>
+			</tr>
+			<tr class="flex w-full mb-4">
+				<td class="p-4 w-1/4">Dogs</td>
+				<td class="p-4 w-1/4">Cats</td>
+				<td class="p-4 w-1/4">Birds</td>
+				<td class="p-4 w-1/4">Fish</td>
+			</tr>
+
+			<tr class="flex w-full mb-4">
+				<td class="p-4 w-1/4">Dogs</td>
+				<td class="p-4 w-1/4">Cats</td>
+				<td class="p-4 w-1/4">Birds</td>
+				<td class="p-4 w-1/4">Fish</td>
+			</tr>
+			<tr class="flex w-full mb-4">
+				<td class="p-4 w-1/4">Dogs</td>
+				<td class="p-4 w-1/4">Cats</td>
+				<td class="p-4 w-1/4">Birds</td>
+				<td class="p-4 w-1/4">Fish</td>
+			</tr>
+			<tr class="flex w-full mb-4">
+				<td class="p-4 w-1/4">Dogs</td>
+				<td class="p-4 w-1/4">Cats</td>
+				<td class="p-4 w-1/4">Birds</td>
+				<td class="p-4 w-1/4">Fish</td>
+			</tr>
+			<tr class="flex w-full mb-4">
+				<td class="p-4 w-1/4">Dogs</td>
+				<td class="p-4 w-1/4">Cats</td>
+				<td class="p-4 w-1/4">Birds</td>
+				<td class="p-4 w-1/4">Fish</td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+<!-- dark design -->
 
 <style lang="postcss">
   p {
