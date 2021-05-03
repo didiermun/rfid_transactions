@@ -18,7 +18,6 @@
 <script>
   export let transactions;
   console.log(transactions);
-  import { goto } from '$app/navigation';
 </script>
 
 <svelte:head>

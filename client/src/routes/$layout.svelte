@@ -8,9 +8,10 @@
       document.querySelector('html').classList.add('dark')
     }
   })
+  import { goto } from '$app/navigation';
 </script>
 
-<div class="float-right w-max flex"><button>Register</button><ToggleTheme/></div>
+<div class="float-right w-max flex"><button class="mx-8" on:click={()=>goto('/new')}>Register</button><ToggleTheme/></div>
 <main>
   <slot />
 </main>
