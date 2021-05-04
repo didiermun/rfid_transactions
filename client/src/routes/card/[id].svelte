@@ -23,7 +23,7 @@ console.log(transactions);
 <svelte:head>
   <title>RFID Data View</title>
 </svelte:head>
-<h1 class="text-2xl font-extrabold mb-2 -mt-8">All Transactions</h1>
+<h1 class="text-2xl mb-2 -mt-8">All Card Transactions</h1>
 
 <div class="w-full">
 	<table class="text-left w-full">
