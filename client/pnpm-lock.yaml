@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@sveltejs/adapter-node': ^1.0.0-next.0
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   '@typescript-eslint/eslint-plugin': 4.21.0
@@ -9,7 +10,7 @@ specifiers:
   axios: 0.21.1
   cssnano: 5.0.2
   eslint: 7.23.0
-  eslint-config-prettier: 8.1.0
+  eslint-config-prettier: 8.3.0
   eslint-plugin-svelte3: 3.1.2
   postcss: 8.2.15
   postcss-load-config: 3.0.1
@@ -24,6 +25,7 @@ specifiers:
   vite: 2.3.2
 
 dependencies:
+  '@sveltejs/adapter-node': 1.0.0-next.0
   axios: 0.21.1
 
 devDependencies:
@@ -34,7 +36,7 @@ devDependencies:
   autoprefixer: 10.2.5_postcss@8.2.15
   cssnano: 5.0.2_postcss@8.2.15
   eslint: 7.23.0
-  eslint-config-prettier: 8.1.0_eslint@7.23.0
+  eslint-config-prettier: 8.3.0_eslint@7.23.0
   eslint-plugin-svelte3: 3.1.2_eslint@7.23.0+svelte@3.37.0
   postcss: 8.2.15
   postcss-load-config: 3.0.1
@@ -128,9 +130,21 @@ packages:
       picomatch: 2.2.2
     dev: true
 
+  /@sveltejs/adapter-node/1.0.0-next.0:
+    resolution: {integrity: sha512-NNdBGSARtrvLWLIUem/RKWYJ7cKq4xn0nxSASKogLSYL5SOrb6AgHunWQXv8VqDZ0jT7xQCORgASn006/HmaYQ==}
+    dependencies:
+      '@sveltejs/app-utils': 1.0.0-next.0
+    dev: false
+
   /@sveltejs/adapter-static/1.0.0-next.9:
     resolution: {integrity: sha512-yqZ+4dzi+2+2jDPHCrI7WrLdXyQ/0U56a7aFdepmodpvpxhazF203D1ez+AtTo27FjMmHjfI+q0O2FivUOosxg==}
     dev: true
+
+  /@sveltejs/app-utils/1.0.0-next.0:
+    resolution: {integrity: sha512-4fCuD+aLrq/iFVJWosIv8oi43tv4o7bGZVyNHMBamdIaVTcydRaPjxQCTM8OQPRVftHyrTIIvT3uH03kAxHZ0Q==}
+    dependencies:
+      mime: 2.5.2
+    dev: false
 
   /@sveltejs/kit/1.0.0-next.107_svelte@3.37.0:
     resolution: {integrity: sha512-HxomGMWbuWTU8lahk98hqIL/xjW6HzNTAvTZVMnnmlMHN1N8x7+abkz4Y09Zhu8lZkZpFuqBj2UlsgPW4uJXtw==}
@@ -875,8 +889,8 @@ packages:
     engines: {node: '>=0.8.0'}
     dev: true
 
-  /eslint-config-prettier/8.1.0_eslint@7.23.0:
-    resolution: {integrity: sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==}
+  /eslint-config-prettier/8.3.0_eslint@7.23.0:
+    resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -1487,6 +1501,12 @@ packages:
       braces: 3.0.2
       picomatch: 2.2.2
     dev: true
+
+  /mime/2.5.2:
+    resolution: {integrity: sha512-tqkh47FzKeCPD2PUiPB6pkbMzsCasjxAfC62/Wap5qrUWcb+sFasXUC5I3gYM5iBM8v/Qpn4UK0x+j0iHyFPDg==}
+    engines: {node: '>=4.0.0'}
+    hasBin: true
+    dev: false
 
   /min-indent/1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
