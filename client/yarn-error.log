@@ -1,0 +1,31 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Didierm\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Didierm\AppData\Local\Microsoft\WindowsApps;C:\Users\Didierm\AppData\Roaming\npm;C:\Users\Didierm\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\Didierm\Documents\2021\Embedded RFID\client\package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  
